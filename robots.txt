@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alandomar100-maker.github.io/sitemap.xml
