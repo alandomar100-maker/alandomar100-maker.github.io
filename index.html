@@ -996,11 +996,11 @@ function auSubmit(){
  var em=(document.getElementById("au_e").value||"").trim(),pw=document.getElementById("au_p").value||"",nm=((document.getElementById("au_n")||{}).value||"").trim();
  if(auMode==="signup"&&!nm){auErr(t("au_e_name"));return}
  auBusy=true;auErr(t("au_wait"));
- var isSu=auMode==="signup";
+ var isSu=auMode==="signup";ngSet(true);
  var p=isSu?FB.auth.createUserWithEmailAndPassword(em,pw).then(function(c){state.me=nm;ngSet(true);return c.user.updateProfile({displayName:nm})}):FB.auth.signInWithEmailAndPassword(em,pw);
- p.then(function(){auBusy=false;if(isSu)openNotifGate()},function(e){auBusy=false;auErr(auMsg(e));if(isSu&&FB.auth.currentUser)openNotifGate()});
+ p.then(function(){auBusy=false;openNotifGate()},function(e){auBusy=false;ngSet(false);auErr(auMsg(e))});
 }
-function auGoogle(){if(auBusy)return;FB.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(function(r){if(r&&r.additionalUserInfo&&r.additionalUserInfo.isNewUser){ngSet(true);openNotifGate()}}).catch(function(e){auErr(auMsg(e))})}
+function auGoogle(){if(auBusy)return;ngSet(true);FB.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(function(){openNotifGate()}).catch(function(e){ngSet(false);auErr(auMsg(e))})}
 function auForgot(){
  var em=((document.getElementById("au_e")||{}).value||"").trim();if(!em){auErr(t("au_need_email"));return}
  FB.auth.sendPasswordResetEmail(em).then(function(){auErr(t("au_reset_sent"))},function(e){auErr(auMsg(e))});
@@ -1017,13 +1017,13 @@ function ngPaint(){
  var sup=("Notification" in window),perm=sup?Notification.permission:"unsupported";
  var inapp=/TikTok|Instagram|FBAN|FBAV|Snapchat|Line\//i.test(navigator.userAgent||"");
  var h='<div class="tmbox"><div class="tmico">🔔</div><h2>'+t("notif_title")+'</h2><p class="ngtxt">'+t("ng_txt")+'</p>';
- if(!sup)h+='<p class="maphint">⚠️ '+t("notif_unsup")+'</p><button type="button" class="btn sec" id="ngskip" style="width:100%">'+t("ng_skip")+'</button>';
+ if(!sup)h+='<p class="maphint">⚠️ '+t("notif_unsup")+'</p>';
  else if(perm==="denied")h+='<p class="maphint">🚫 '+t("notif_denied")+'<br>'+t("notif_how")+'</p>';
  else{
   h+='<button type="button" class="btn" id="ngperm" style="width:100%;margin-bottom:8px">🔔 '+t("notif_perm")+'</button>';
   if(ntMsg||inapp)h+='<p class="maphint">⚠️ '+t("notif_nodlg")+'</p>';
  }
- bg.innerHTML=h+'</div>';
+ bg.innerHTML=h+'<button type="button" class="btn" id="ngskip" style="width:100%;margin-top:4px">✖️ '+t("pk_x")+'</button></div>';
 }
 function openNotifGate(){
  if(document.getElementById("ngbg"))return;
