@@ -586,7 +586,7 @@ document.addEventListener("click",function(e){
  else if(tb.dataset.pr!==undefined)mpPickResult(+tb.dataset.pr);
  else if(tb.id==="tmok"){var tc=document.getElementById("tmchk");if(tc&&tc.checked){termsOK=true;try{localStorage.setItem(TERMS,"1")}catch(e){}var tg=document.getElementById("tmbg");if(tg)tg.remove();gate()}else{var te=document.getElementById("tmerr");if(te)te.classList.remove("hide")}}
  else if(tb.id==="ngperm")ngPerm();
- else if(tb.id==="ngskip")ngDone();
+ 
  else if(tb.id==="pkx")pkClose();
  else if(tb.id==="pkok"){state.time=z2((pk.h%12)+(pk.pm?12:0))+":"+z2(pk.m);var tx=document.getElementById("tmTxt"),ti=document.getElementById("tm");if(tx){tx.textContent=state.time;tx.classList.remove("ph")}if(ti)ti.value=state.time;refreshExp();pkClose()}
 });
@@ -1023,7 +1023,7 @@ function ngPaint(){
   h+='<button type="button" class="btn" id="ngperm" style="width:100%;margin-bottom:8px">🔔 '+t("notif_perm")+'</button>';
   if(ntMsg||inapp)h+='<p class="maphint">⚠️ '+t("notif_nodlg")+'</p>';
  }
- bg.innerHTML=h+'<button type="button" class="btn" id="ngskip" style="width:100%;margin-top:4px">✖️ '+t("pk_x")+'</button></div>';
+ bg.innerHTML=h+'</div>';
 }
 function openNotifGate(){
  if(document.getElementById("ngbg"))return;
