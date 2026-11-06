@@ -7,7 +7,7 @@ try{
     // the server sends data-only messages, so we show the notification ourselves
     messaging.onBackgroundMessage(function(p){
       var d=p.data||{};
-      return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"icon-192.png",tag:d.tag||d.type||"hawrega",data:{url:"./"}});
+      return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"badge-96.png",tag:d.tag||d.type||"hawrega",data:{url:"./"}});
     });
   }
 }catch(e){}
