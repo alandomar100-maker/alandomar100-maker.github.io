@@ -658,6 +658,21 @@ function tick(){
  if(typeof pendingRender!=="undefined"&&pendingRender&&!guardBusy()){pendingRender=false;softRender()}
  refreshGates();
 }
+/* ---- iPhone: Notification API only exists for web apps added to the Home Screen (iOS 16.4+) ---- */
+function isIOS(){var u=navigator.userAgent||"";return /iPad|iPhone|iPod/.test(u)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1)}
+function isStandalone(){return window.navigator.standalone===true||(window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)}
+var IOSH={
+ ckb:{a:"\ud83d\udcf2 \u0644\u06d5 iPhone \u0626\u0627\u06af\u0627\u062f\u0627\u0631\u06a9\u0631\u062f\u0646\u06d5\u0648\u06d5 \u062a\u06d5\u0646\u0647\u0627 \u06a9\u0627\u0631 \u062f\u06d5\u06a9\u0627\u062a \u06a9\u0627\u062a\u06ce\u06a9 \u0626\u06d5\u067e\u06d5\u06a9\u06d5 \u0644\u06d5\u0633\u06d5\u0631 \u0634\u0627\u0634\u06d5\u06cc \u0633\u06d5\u0631\u06d5\u06a9\u06cc \u062f\u0627\u0628\u0646\u06ce\u06cc:<br>\u0661) \u0644\u06d5 Safari \u062f\u0648\u06af\u0645\u06d5\u06cc \u0647\u0627\u0648\u0628\u06d5\u0634\u06a9\u0631\u062f\u0646 (\u2b06\ufe0f) \u062f\u0627\u0628\u06af\u0631\u06d5<br>\u0662) \u00abAdd to Home Screen\u00bb \u0647\u06d5\u06b5\u0628\u0698\u06ce\u0631\u06d5 \u0648 Add \u0628\u06a9\u06d5<br>\u0663) \u0626\u06d5\u067e\u06d5\u06a9\u06d5 \u0644\u06d5 \u0634\u0627\u0634\u06d5\u06cc \u0633\u06d5\u0631\u06d5\u06a9\u06cc\u06cc\u06d5\u0648\u06d5 \u0628\u06a9\u06d5\u0631\u06d5\u0648\u06d5\u060c \u0626\u06cc\u062a\u0631 \u062f\u0648\u06af\u0645\u06d5\u06cc \u0686\u0627\u0644\u0627\u06a9\u06a9\u0631\u062f\u0646\u06cc \u0626\u0627\u06af\u0627\u062f\u0627\u0631\u06a9\u0631\u062f\u0646\u06d5\u0648\u06d5 \u062f\u06d5\u0631\u062f\u06d5\u06a9\u06d5\u0648\u06ce\u062a.",
+  b:"\u26a0\ufe0f \u0628\u06c6 \u0626\u0627\u06af\u0627\u062f\u0627\u0631\u06a9\u0631\u062f\u0646\u06d5\u0648\u06d5 \u062f\u06d5\u0628\u06ce\u062a iOS \u0646\u0648\u06ce \u0628\u06a9\u06d5\u06cc\u062a\u06d5\u0648\u06d5 \u0628\u06c6 \u0646\u0627\u0648\u0647\u06ce\u0646\u0627\u0646\u06cc 16.4 \u06cc\u0627\u0646 \u0646\u0648\u06ce\u062a\u0631."},
+ en:{a:"\ud83d\udcf2 On iPhone, notifications only work after the app is added to your Home Screen:<br>1) In Safari tap the Share button (\u2b06\ufe0f)<br>2) Choose \u201cAdd to Home Screen\u201d and tap Add<br>3) Open the app from the Home Screen \u2014 the enable-notifications button will then appear.",
+  b:"\u26a0\ufe0f Notifications on iPhone need iOS 16.4 or newer. Please update iOS."},
+ ar:{a:"\ud83d\udcf2 \u0641\u064a \u0627\u0644\u0622\u064a\u0641\u0648\u0646 \u062a\u0639\u0645\u0644 \u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062a \u0641\u0642\u0637 \u0628\u0639\u062f \u0625\u0636\u0627\u0641\u0629 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0625\u0644\u0649 \u0627\u0644\u0634\u0627\u0634\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629:<br>1) \u0641\u064a Safari \u0627\u0636\u063a\u0637 \u0632\u0631 \u0627\u0644\u0645\u0634\u0627\u0631\u0643\u0629 (\u2b06\ufe0f)<br>2) \u0627\u062e\u062a\u0631 \u00abAdd to Home Screen\u00bb \u062b\u0645 Add<br>3) \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0634\u0627\u0634\u0629 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629 \u0648\u0633\u064a\u0638\u0647\u0631 \u0632\u0631 \u062a\u0641\u0639\u064a\u0644 \u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062a.",
+  b:"\u26a0\ufe0f \u0627\u0644\u0625\u0634\u0639\u0627\u0631\u0627\u062a \u0641\u064a \u0627\u0644\u0622\u064a\u0641\u0648\u0646 \u062a\u062a\u0637\u0644\u0628 iOS 16.4 \u0623\u0648 \u0623\u062d\u062f\u062b. \u064a\u0631\u062c\u0649 \u062a\u062d\u062f\u064a\u062b iOS."}
+};
+function unsupHtml(){
+ if(isIOS()){var d=IOSH[lang]||IOSH.en;return '<p class="maphint" style="line-height:1.9">'+(isStandalone()?d.b:d.a)+'</p>'}
+ return '<p class="maphint">\u26a0\ufe0f '+t("notif_unsup")+'</p>';
+}
 function ntClose(){var b=document.getElementById("ntbg");if(b)b.remove()}
 var ntMsg="";
 function ntPerm(){
@@ -683,7 +698,7 @@ function openNotifs(){
  var sup=("Notification" in window),perm=sup?Notification.permission:"unsupported";
  var h='<div class="sheet nt" role="dialog"><h3 style="margin:0 0 8px">🔔 '+t("notif_title")+'</h3>';
  var inapp=/TikTok|Instagram|FBAN|FBAV|Snapchat|Line\//i.test(navigator.userAgent||"");
- if(!sup)h+='<p class="maphint">⚠️ '+t("notif_unsup")+'</p>';
+ if(!sup)h+=unsupHtml();
  else if(perm==="granted")h+='<p class="maphint">✅ '+t("notif_on")+'</p>'+(cloud&&!pushOn?'<p class="maphint">📡 '+t("push_off",{e:pushState||(VAPID?"…":"no-vapid")})+'</p>':"");
  else if(perm==="denied")h+='<p class="maphint">🚫 '+t("notif_denied")+'<br>'+t("notif_how")+'</p>';
  else{
@@ -1017,7 +1032,7 @@ function ngPaint(){
  var sup=("Notification" in window),perm=sup?Notification.permission:"unsupported";
  var inapp=/TikTok|Instagram|FBAN|FBAV|Snapchat|Line\//i.test(navigator.userAgent||"");
  var h='<div class="tmbox"><div class="tmico">🔔</div><h2>'+t("notif_title")+'</h2><p class="ngtxt">'+t("ng_txt")+'</p>';
- if(!sup)h+='<p class="maphint">⚠️ '+t("notif_unsup")+'</p>';
+ if(!sup)h+=unsupHtml();
  else{
   h+='<button type="button" class="btn" id="ngperm" style="width:100%;margin-bottom:8px">🔔 '+t("notif_perm")+'</button>';
   if(ntMsg||inapp)h+='<p class="maphint">⚠️ '+t("notif_nodlg")+'</p>';
