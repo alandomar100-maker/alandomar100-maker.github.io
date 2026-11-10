@@ -7,7 +7,7 @@ try{
     // the server sends data-only messages, so we show the notification ourselves
     messaging.onBackgroundMessage(function(p){
       var d=p.data||{};
-      return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"badge-96.png",tag:d.tag||d.type||"hawrega",renotify:true,requireInteraction:true,silent:false,vibrate:[250,120,250],timestamp:Date.now(),dir:"auto",data:{url:"./"}});
+      var tg=d.tag||d.type||"hawrega";return self.registration.getNotifications({tag:tg}).then(function(l){return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"badge-96.png",tag:tg,renotify:!(l.length&&/^due-/.test(tg)),requireInteraction:true,silent:false,vibrate:[250,120,250],timestamp:Date.now(),dir:"auto",data:{url:"./"}})});
     });
   }
 }catch(e){}
