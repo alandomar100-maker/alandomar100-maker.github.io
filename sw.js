@@ -7,7 +7,7 @@ try{
     // the server sends data-only messages, so we show the notification ourselves
     messaging.onBackgroundMessage(function(p){
       var d=p.data||{};
-      return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"badge-96.png",tag:d.tag||d.type||"hawrega",data:{url:"./"}});
+      return self.registration.showNotification(d.title||"هاوڕێگە",{body:d.body||"",icon:"icon-192.png",badge:"badge-96.png",tag:d.tag||d.type||"hawrega",renotify:true,requireInteraction:true,silent:false,vibrate:[250,120,250],timestamp:Date.now(),dir:"auto",data:{url:"./"}});
     });
   }
 }catch(e){}
@@ -19,7 +19,7 @@ self.addEventListener("fetch",function(e){
   var u=new URL(rq.url);
   if(u.origin!==location.origin)return; // never touch Firebase / map / API requests
   e.respondWith(fetch(rq).then(function(r){
-    if(r&&r.ok){var c=r.clone();caches.open("hr-v2").then(function(k){k.put(rq,c)})}
+    if(r&&r.ok){var c=r.clone();caches.open("hr-v3").then(function(k){k.put(rq,c)})}
     return r;
   }).catch(function(){return caches.match(rq).then(function(m){return m||caches.match("./")})}));
 });
