@@ -105,10 +105,28 @@ header p{color:var(--ink);opacity:.9}
 /* v3 */
 .sheet-bg{z-index:70}.toast{z-index:120}
 .tmerr{font-weight:400;font-size:.95rem;line-height:2}
-.tabs button{font-size:.66rem;padding:6px 2px}.tabs button em{font-style:normal;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.tabs button{font-size:.62rem;padding:6px 2px}.tabs button em{font-style:normal;white-space:normal;line-height:1.2;text-align:center;max-width:100%}
 #pfbg{align-items:flex-start}#pfbg .tmbox{margin:auto;width:100%;max-width:520px}
 .rqbg{position:fixed;inset:0;z-index:30;overflow:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 18px 44px;background:radial-gradient(560px 420px at 85% 0,rgba(255,122,26,.30),transparent 70%),radial-gradient(480px 420px at 0 100%,rgba(255,154,60,.14),transparent 70%),#120E0B;color:var(--ink)}
 .rqbg>*{max-width:560px;margin-inline:auto}.rqtop{display:flex;align-items:center;gap:12px;margin-bottom:6px}.rqtop h2{margin:0;font-size:1.25rem;flex:1}.rqx{position:static;flex:none}
 #rqsend:disabled{opacity:.4;box-shadow:none;filter:grayscale(.4)}
 .mecard{text-align:center}.meava{width:76px;height:76px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;font-size:1.9rem;font-weight:800;color:var(--dk);background:var(--cta);box-shadow:0 10px 26px rgba(255,106,20,.4),inset 0 1px 0 rgba(255,255,255,.4)}
 .mename{font-size:1.25rem;font-weight:800;margin-bottom:8px}.mecard .meta{justify-content:center}
+
+/* v4 */
+.emk{width:34px;height:34px;display:grid;place-items:center;background:none;border:0;border-radius:0;box-shadow:none;font-size:26px;line-height:1;color:#1a0e06;text-shadow:0 0 3px #fff,0 0 7px rgba(255,255,255,.9);filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+.emk svg{width:28px;height:36px;margin-top:-4px}
+.meava{position:relative;padding:0;border:0;cursor:pointer;font-family:inherit}.meava img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.mecam{position:absolute;right:-2px;bottom:-2px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:rgba(32,25,20,.92);border:1px solid rgba(255,255,255,.3);color:var(--accent2)}.mecam .i{width:15px;height:15px}
+.meemail{color:var(--muted);font-size:.9rem;direction:ltr;word-break:break-all;margin-bottom:8px}
+#app .mecard{margin-bottom:30px}#app .acpanel{margin-top:30px}
+.lcar{position:relative;width:46px;height:46px;display:grid;place-items:center;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}.lcar svg{width:46px;height:46px;position:relative}
+.lcar::before{content:"";position:absolute;inset:2px;border-radius:50%;background:rgba(255,138,43,.3);animation:lpulse 1.8s ease-out infinite}
+@keyframes lpulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@media (prefers-reduced-motion:reduce){.lcar::before{animation:none}}
+.leaflet-popup-content-wrapper{background:rgba(32,25,20,.58);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,154,60,.5);border-radius:20px;box-shadow:0 14px 34px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.14);color:#fff}
+.leaflet-popup-tip{background:rgba(32,25,20,.72);border:1px solid rgba(255,154,60,.4)}
+.leaflet-popup-content{margin:14px 16px;line-height:1.9;font-size:.95rem}.leaflet-popup-content b{color:var(--accent2)}
+a.leaflet-popup-close-button{color:var(--accent2)!important}
+.leaflet-bar{border:1px solid rgba(255,255,255,.16)!important;border-radius:16px!important;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.35)!important}
+.leaflet-bar a{background:rgba(32,25,20,.55);color:var(--accent2);border-bottom:1px solid rgba(255,255,255,.12)}
