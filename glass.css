@@ -87,7 +87,7 @@ header p{color:var(--ink);opacity:.9}
 .lgmap text{fill:#FF9A3C}
 
 /* maps */
-.leaflet-tile-pane{filter:sepia(.2) saturate(.9) hue-rotate(-6deg) brightness(.98) contrast(.96)}
+
 .leaflet-container{background:#EFE6DA;font-family:var(--font)}
 .mapbox{border-radius:28px;border:1px solid rgba(255,154,60,.5);box-shadow:0 18px 44px rgba(0,0,0,.45),0 0 0 4px rgba(255,138,43,.08)}.mapbox::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:450;box-shadow:inset 0 0 34px rgba(20,17,15,.30)}
 .emk{width:34px;height:34px;display:grid;place-items:center;font-size:18px;line-height:1;color:var(--dk);background:linear-gradient(135deg,#FFB066,#FF6A14);border:2px solid #fff;border-radius:50%;box-shadow:0 6px 14px rgba(0,0,0,.4)}
@@ -175,3 +175,29 @@ html[data-theme=light] .navinfo{background:rgba(255,250,244,.85);color:var(--ink
 html[data-theme=light] .lgmap rect[fill="#FFE6CB"]{fill:#FFE6CB}html[data-theme=light] .lgmap rect[fill="#D4EFC4"]{fill:#D4EFC4}html[data-theme=light] .lgmap rect[fill="#FFF4E6"]{fill:#FFF4E6}
 html[data-theme=light] .lgmap path[stroke="#BFE3F5"]{stroke:#BFE3F5}html[data-theme=light] .lgmap g[stroke="#fff"]{stroke:#fff}html[data-theme=light] .lgmap path[stroke="#FFB66E"]{stroke:#FFB66E}html[data-theme=light] .lgmap path[stroke="#fff"]{stroke:#fff}
 html[data-theme=light] .lgmap text{fill:#E8700A}
+
+/* ===== v6 ===== */
+#frow{margin-top:18px!important}
+.tabs{touch-action:none}
+.tabs.drag #pill{box-shadow:0 12px 28px rgba(255,138,43,.6)}
+.grid2 .amt .selbtn{border:1.5px solid rgba(255,154,60,.85)!important;border-radius:16px!important;background:rgba(255,138,43,.16)!important;box-shadow:0 0 0 3px rgba(255,138,43,.10),0 6px 16px rgba(255,106,20,.25),inset 0 1px 0 rgba(255,255,255,.3)!important;-webkit-backdrop-filter:blur(12px) saturate(170%);backdrop-filter:blur(12px) saturate(170%)}
+.selopt{border:1.5px solid rgba(255,154,60,.6)!important;border-radius:16px;box-shadow:0 0 0 3px rgba(255,138,43,.08),inset 0 1px 0 rgba(255,255,255,.2)}
+.selopt[aria-pressed="true"]{border-color:rgba(255,200,150,.9)!important;box-shadow:0 8px 20px rgba(255,106,20,.35),inset 0 1px 0 rgba(255,255,255,.4)}
+.phdel{display:block;margin:-2px auto 10px;border:1px solid rgba(255,123,123,.55);background:rgba(255,123,123,.12);color:var(--bad);border-radius:999px;padding:4px 14px;font:inherit;font-size:.8rem;cursor:pointer}
+.pfava{text-align:center;margin:8px 0 6px}
+.gsthint{text-align:center;font-size:.76rem;color:var(--muted);margin:4px 0 2px}
+.gstbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 12px;padding:8px 12px;border:1px solid rgba(255,154,60,.45);border-radius:18px;background:rgba(255,138,43,.1);font-size:.86rem}
+.gstbar .btn{padding:6px 12px;font-size:.8rem;min-height:0}
+.guestwall{text-align:center}
+html.guest #bellBtn{display:none!important}
+/* map: dark and light styles that follow the site theme */
+.leaflet-container{background:#1b1511;font-family:inherit}
+.leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) sepia(.5) saturate(1.25) brightness(.78) contrast(.92)}
+.leaflet-control-attribution{background:rgba(20,17,15,.62)!important;color:rgba(246,239,232,.7)!important}
+html[data-theme=light] .leaflet-container{background:#f4e6d6}
+html[data-theme=light] .leaflet-tile-pane{filter:sepia(.3) saturate(1.2) hue-rotate(-8deg) contrast(1.04)}
+html[data-theme=light] .leaflet-control-attribution{background:rgba(255,248,240,.78)!important;color:rgba(43,27,16,.7)!important}
+/* live car = same car as the road strip */
+.lcar .lcr{width:46px;height:46px;display:grid;place-items:center;transition:transform .6s ease;position:relative}
+.lcar svg{filter:drop-shadow(0 2px 3px rgba(0,0,0,.55))}
+html[data-theme=light] .lcar use{stroke:#D4510A}
