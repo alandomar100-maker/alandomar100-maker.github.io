@@ -133,7 +133,7 @@ a.leaflet-popup-close-button{color:var(--accent2)!important}
 
 /* v5 */
 :root{--hi:rgba(255,255,255,.09);--sh:rgba(0,0,0,.28)}
-.roadstrip{margin:-8px 0 -16px}
+.roadstrip{margin:22px 0 -16px}
 #frow{padding:10px 14px 26px;margin:-10px -14px -14px}
 #fpill{box-shadow:0 6px 14px rgba(255,106,20,.35)}
 .tabs button .tabemo{font-size:22px;line-height:24px;height:26px}.tabs button[aria-selected="true"] .tabemo{color:#E8520A}
@@ -201,3 +201,15 @@ html[data-theme=light] .leaflet-control-attribution{background:rgba(255,248,240,
 .lcar .lcr{width:46px;height:46px;display:grid;place-items:center;transition:transform .6s ease;position:relative}
 .lcar svg{filter:drop-shadow(0 2px 3px rgba(0,0,0,.55))}
 html[data-theme=light] .lcar use{stroke:#D4510A}
+
+/* v5 fixes */
+input:focus,select:focus,.grid2 input:not([type=hidden]):focus{border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(255,138,43,.28)!important;outline:0}
+#app .mepf{margin-bottom:22px}#app .acbtn{width:100%;margin-top:22px}
+.augst{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;line-height:1.35}.augst small{font-size:.72rem;font-weight:500;opacity:.78}
+.emk.emk-home{color:#FF8A2B;text-shadow:0 0 4px rgba(255,170,90,.95),0 0 12px rgba(255,138,43,.8);filter:drop-shadow(0 0 6px rgba(255,138,43,.7)) drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+#lgName.lg2{display:inline-flex;flex-direction:column;align-items:center;line-height:1.2;text-align:center}
+#lgName.lg2 span{display:block;white-space:nowrap}#lgName.lg2 span+span{font-size:.84em;font-weight:600;opacity:.92}
+header .hin .htop.lg2row{flex-wrap:nowrap!important;gap:8px!important}
+header .hin .htop.lg2row h1{flex:0 1 auto!important;min-width:0}
+header .hin .htop.lg2row .lgbtn{padding:5px 10px;font-size:.74rem}
+@media (max-width:520px){header .hin .htop.lg2row h1{font-size:1.35rem;gap:8px}header .hin .htop.lg2row .logo{width:44px;height:44px}}
