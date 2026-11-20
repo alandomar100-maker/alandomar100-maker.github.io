@@ -19,7 +19,7 @@ self.addEventListener("fetch",function(e){
   var u=new URL(rq.url);
   if(u.origin!==location.origin)return; // never touch Firebase / map / API requests
   e.respondWith(fetch(rq).then(function(r){
-    if(r&&r.ok){var c=r.clone();caches.open("hr-v5").then(function(k){k.put(rq,c)})}
+    if(r&&r.ok){var c=r.clone();caches.open("hr-v7").then(function(k){k.put(rq,c)})}
     return r;
   }).catch(function(){return caches.match(rq).then(function(m){return m||caches.match("./")})}));
 });
