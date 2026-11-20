@@ -238,3 +238,10 @@ header .hin .htop.lg2row #lgBtn{gap:5px;padding:5px 9px}
 .abct{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
 .abct a{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--accent2);text-decoration:none;word-break:break-all}
 .abct span{direction:ltr;unicode-bidi:isolate}
+
+/* small install button in the header */
+header .hin .hinstrow{display:flex;margin-top:8px}
+header .hin .hinstrow .hinst{margin-inline-start:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;font-size:.78rem;line-height:1.3;white-space:nowrap;max-width:100%}
+header .hin .hinstrow .hinst .i{width:1.15em;height:1.15em;flex:0 0 auto}
+html[data-theme=light] header .hin .hinstrow .hinst{background:#fff;color:#E85D04}
+@media (max-width:380px){header .hin .hinstrow .hinst{font-size:.72rem;padding:5px 11px}}
