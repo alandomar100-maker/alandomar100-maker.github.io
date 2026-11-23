@@ -254,7 +254,7 @@ a.btn{text-align:center}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Vazirmatn:wght@400;600;800&family=Noto+Emoji:wght@500;700&display=swap" rel="stylesheet">
-<script>try{var hv=localStorage.getItem("hw_theme");if(hv==="light"||(hv==="system"&&window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script><link rel="stylesheet" href="glass.css?v=7">
+<script>try{var hv=localStorage.getItem("hw_theme");if(hv==="light"||(hv==="system"&&window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script><link rel="stylesheet" href="glass.css?v=7"><link rel="stylesheet" href="plus.css?v=1">
 </head>
 <body>
 <noscript><h1>هاوڕێگە · HawRega</h1><p>هاوڕێگە: وێبسایتی هاوبەشکردنی ڕێگا (Carpooling) بۆ شۆفێر و سەرنشین لە کوردستان. بە هەمان ڕێگادا بڕۆ، تێچووی بەنزین دابەش بکە و قەرەباڵغی کەم بکەرەوە.</p></noscript>
@@ -281,8 +281,10 @@ a.btn{text-align:center}
   <button role="tab" data-tab="find" aria-selected="true"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><em data-i="tab_find"></em></button>
   <button role="tab" data-tab="offer" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span><em data-i="tab_offer"></em></button>
   <button role="tab" data-tab="req" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m4 8.5 8 5.5 8-5.5"/></svg></span><em data-i="tab_req"></em></button>
+  <button role="tab" data-tab="chats" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><b class="tbd hide" id="chBd"></b></span><em data-i="tab_chats"></em></button>
   <button role="tab" data-tab="map" aria-selected="false"><span class="tabemo">🗺</span><em data-i="tab_map"></em></button>
   <button role="tab" data-tab="me" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.2-2.4 3.200-3.500 5.500-3.500s4.300 1.100 5.500 3.500"/></svg></span><em data-i="tab_me"></em></button>
+  <button role="tab" data-tab="fb" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-6"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z"/></svg></span><em data-i="tab_fb"></em></button>
   <button role="tab" data-tab="about" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><em data-i="tab_about"></em></button>
 </nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -290,6 +292,7 @@ a.btn{text-align:center}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-messaging-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-storage-compat.js"></script>
 <script>
 var FBCFG={apiKey:"AIzaSyBLH-wW-s3SJvMoILOySgUuHd2eyV9zvbc",authDomain:"hawrega.firebaseapp.com",projectId:"hawrega",storageBucket:"hawrega.firebasestorage.app",messagingSenderId:"991365015814",appId:"1:991365015814:web:4c923be330b19472771687"};
 var FB=null,UID=null,UEMAIL="";
@@ -311,9 +314,9 @@ Object.assign(T.en,{tab_me:"Account",pf_t:"Tell us about you",pf_s:"You fill thi
 Object.assign(T.ar,{tab_me:"الحساب",pf_t:"عرّفنا بنفسك",pf_s:"تملأها مرة واحدة، ويمكنك تعديلها لاحقًا من «الحساب».",pf_go:"متابعة",me_t:"الحساب",me_save:"حفظ",me_saved:"تم حفظ معلوماتك ✅",rq_h:"يرجى تحديد عنوانك",rq_send:"إرسال",toast_phone:"اكتب رقم واتساب",req_btn:"إرسال الطلب",offer_h:"حدد رحلتك"});
 Object.assign(T.bdn,{tab_me:"هەژمار",pf_t:"زانیارییێن خۆ بنڤێسە",pf_s:"تو تنێ جارەکێ پڕ دکەی؛ پاشی دشێی د «هەژمار» دا بگۆهۆری.",pf_go:"بەردەوام بە",me_t:"هەژمار",me_save:"تۆمارکرن",me_saved:"زانیاری هاتنە تۆمارکرن ✅",rq_h:"ژ کەرەما خۆ ناڤنیشانێ خۆ دیار بکە",rq_send:"هنارتن",toast_phone:"ژمارا WhatsApp بنڤێسە",req_btn:"هنارتنا داخوازێ",offer_h:"رێکا خۆ دیار بکە"});
 Object.assign(T.bdl,{tab_me:"Hesab",pf_t:"Agahiyên xwe binivîse",pf_s:"Tu tenê carekê tije dikî; paşê dikarî di «Hesab» de biguherî.",pf_go:"Berdewam be",me_t:"Hesab",me_save:"Tomar bike",me_saved:"Agahî hatin tomarkirin ✅",rq_h:"Ji kerema xwe navnîşana xwe diyar bike",rq_send:"Bişîne",toast_phone:"Hejmara WhatsApp binivîse",req_btn:"Şandina daxwazê",offer_h:"Rêya xwe diyar bike"});
-function profFields(){return profBlock()+'<label for="ph">📱 '+t("phone")+'</label><input id="ph" type="tel" inputmode="tel" value="'+esc(state.phone)+'" placeholder="07501234567">'}
-function profDone(){return profOK()&&!!String(state.phone||"").trim()}
-function profCheck(){if(!profOK()){toast(t("toast_prof"));return false}if(!String(state.phone||"").trim()){toast(t("toast_phone"));return false}return true}
+function profFields(){return profBlock()+'<label for="ph">📱 '+t("phone")+' <small class="phopt">('+t("ph_opt")+')</small></label><input id="ph" type="tel" inputmode="tel" value="'+esc(state.phone)+'" placeholder="07501234567">'}
+function profDone(){return profOK()}
+function profCheck(){if(!profOK()){toast(t("toast_prof"));return false}return true}
 function ensureProfile(){
  if(hasLang&&termsOK&&!(cloud&&!UID)&&profDone()&&!document.getElementById("pfbg")){askGeoOnce();return}
  if(!hasLang||!termsOK||(cloud&&!UID)||profDone()||document.getElementById("pfbg"))return;
@@ -358,7 +361,7 @@ Object.assign(T.bdl,{live_go:"Cihê min li ser nexşeyê parve bike",live_on:"R�
 var CAMSVG='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
 function viewMe(){
  var n=String(state.me||"").trim(),ag=state.age,gn=state.gender,em=(cloud&&UID)?UEMAIL:"";
- return '<h2>👤 '+t("me_t")+'</h2><div class="panel mecard"><button type="button" class="meava" id="phbtn" aria-label="photo">'+(state.photo?'<img src="'+state.photo+'" alt="">':esc(n.charAt(0)||"؟"))+'<span class="mecam">'+CAMSVG+'</span></button><input type="file" accept="image/*" id="phfile" hidden>'+(state.photo?'<button type="button" class="phdel" id="phdel">'+t("ph_del")+'</button>':'')+'<div class="mename">'+esc(n||"—")+'</div>'+(em?'<div class="meemail">'+esc(em)+'</div>':'')+'<div class="meta">'+(ag?'<i>🎂 '+esc(ag)+'</i>':'')+(gn?'<i>'+(gn==="f"?'👩 '+t("gen_f"):'👨 '+t("gen_m"))+'</i>':'')+(state.phone?'<i>📱 '+esc(state.phone)+'</i>':'')+'</div></div><div class="panel mepf">'+profFields()+'<button type="button" class="btn" id="mesave" style="width:100%;margin-top:14px">💾 '+t("me_save")+'</button></div>'+thPanel()+((cloud&&UID)?'<button type="button" class="btn no acbtn" id="aclogout">🚪 '+t("logout")+'</button>':'')}
+ return '<h2>👤 '+t("me_t")+'</h2><div class="panel mecard"><button type="button" class="meava" id="phbtn" aria-label="photo">'+(state.photo?'<img src="'+state.photo+'" alt="">':esc(n.charAt(0)||"؟"))+'<span class="mecam">'+CAMSVG+'</span></button><input type="file" accept="image/*" id="phfile" hidden>'+(state.photo?'<button type="button" class="phdel" id="phdel">'+t("ph_del")+'</button>':'')+'<div class="mename">'+esc(n||"—")+'</div>'+(em?'<div class="meemail">'+esc(em)+'</div>':'')+'<div class="meta">'+(ag?'<i>🎂 '+esc(ag)+'</i>':'')+(gn?'<i>'+(gn==="f"?'👩 '+t("gen_f"):'👨 '+t("gen_m"))+'</i>':'')+'<i>📱 '+(state.phone?esc(state.phone):t("no_val"))+'</i>'+'</div></div><div class="panel mepf">'+profFields()+'<button type="button" class="btn" id="mesave" style="width:100%;margin-top:14px">💾 '+t("me_save")+'</button></div>'+thPanel()+((cloud&&UID)?'<button type="button" class="btn no acbtn" id="aclogout">🚪 '+t("logout")+'</button>':'')}
 function photoSync(){if(cloud&&UID)FB.db.collection("users").doc(UID).set({photo:state.photo||""},{merge:true}).catch(function(){})}
 document.addEventListener("change",function(e){if(e.target.id!=="phfile")return;var f=e.target.files&&e.target.files[0];if(!f)return;
  var rd=new FileReader();rd.onload=function(){var im=new Image();im.onload=function(){var c=document.createElement("canvas"),z=256,m=Math.min(im.width,im.height);c.width=c.height=z;c.getContext("2d").drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,z,z);state.photo=c.toDataURL("image/jpeg",.82);save();photoSync();doRender();pfAvaPaint();toast(t("me_saved"))};im.src=rd.result};rd.readAsDataURL(f)});
@@ -379,12 +382,12 @@ function liveStart(rid){
   var h=(c.heading!=null&&!isNaN(c.heading))?c.heading:null;if(h===null&&livePrev&&liveDist(livePrev,ll)>6)h=liveBear(livePrev,ll);livePrev=ll;
   var o={lat:+ll[0].toFixed(6),lng:+ll[1].toFixed(6),h:h===null?null:Math.round(h),ts:now};
   r.live=o;liveDraw();if(cloud&&UID)FB.db.collection("rides").doc(rid).update({live:o}).catch(function(){});
-  if(r.toLL&&liveDist(ll,r.toLL)<120){if(++liveArr>=3){liveStop(true);toast("🏁 "+t("live_arr"),3500)}}else liveArr=0;
+  if(r.toLL&&liveDist(ll,r.toLL)<120){if(++liveArr>=3){liveStop(true);toast("🏁 "+t("live_arr"),3500);if(window.hwEnd)hwEnd(rid)}}else liveArr=0;
  },function(){toast(t("live_err"),3500);liveStop(false);doRender()},{enableHighAccuracy:true,maximumAge:3000,timeout:25000});
 }
 function liveOK(r){return !!(r&&r.live&&!r.cancelled&&r.tripDay===dayKey(new Date())&&Date.now()-r.live.ts<180000)}
 function liveSee(r){if(!liveOK(r))return false;if(r.mine)return true;var q=myReq(r.id);return !!(q&&q.status==="accepted")}
-var LK=["seats","cancelled","expires","tripDay","time","price","total","cap","dur","type"];
+var LK=["seats","cancelled","expires","tripDay","tripEnd","time","price","total","cap","dur","type"];
 function liveOnly(a,b){if(!a||!b||a.length!==b.length||!b.length)return false;var ch=false;
  for(var i=0;i<a.length;i++){var x=a[i],y=b[i];if(x.id!==y.id)return false;for(var k=0;k<LK.length;k++)if(x[LK[k]]!==y[LK[k]])return false;if(JSON.stringify(x.live||null)!==JSON.stringify(y.live||null))ch=true}return ch}
 function carIcon(flip){return L.divIcon({className:"",html:'<div class="lcar" style="transform:scaleX('+(flip?-1:1)+')"><svg viewBox="0 0 24 24"><path d="'+CARB+'" fill="#fff" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><path d="'+CARB+'" fill="#FF8A2B" stroke="#1a0e06" stroke-width="1.1" stroke-linejoin="round"/><circle cx="7.2" cy="17" r="2.1" fill="#1a0e06" stroke="#fff" stroke-width="1"/><circle cx="16.8" cy="17" r="2.1" fill="#1a0e06" stroke="#fff" stroke-width="1"/></svg></div>',iconSize:[46,46],iconAnchor:[23,30]})}
@@ -456,8 +459,9 @@ var STI={pending:"⏳ ",accepted:"✅ ",rejected:"❌ ",cancelled:"🚫 "};
 function stT(x,q){return STI[x]+t(x==="cancelled"&&q?"st_cancelled_"+(q.by||"p"):"st_"+x)}
 function daysHtml(r){var d=r.days||[],D=t("days");if(!d.length)return"";return '<div class="meta">'+d.map(function(i){return '<i>'+D[i]+'</i>'}).join("")+'</div>'}
 function wa(p){var d=String(p).replace(/\D/g,"");if(d.indexOf("00")===0)d=d.slice(2);else if(d.charAt(0)==="0")d="964"+d.slice(1);return "https://wa.me/"+d}
-function phLine(p){return p?'<span class="phline">'+t("phone_lbl")+' : <bdi dir="ltr">'+esc(p)+'</bdi></span>':""}
-function waBtn(p,l){return '<a class="btn ok" style="text-decoration:none;text-align:center" target="_blank" rel="noopener" href="'+wa(p)+'">'+l+'</a>'}
+function phLine(p){p=String(p||"").trim();return '<span class="phline">'+t("phone_lbl")+' : '+(p?'<bdi dir="ltr">'+esc(p)+'</bdi>':t("no_val"))+'</span>'}
+function chBtn(){return ""}function viewChats(){return ""}function viewFeedback(){return ""}
+function waBtn(p,l){if(!String(p||"").trim())return '<span class="btn sec wadis">💬 WhatsApp : '+t("no_val")+'</span>';return '<a class="btn ok" style="text-decoration:none;text-align:center" target="_blank" rel="noopener" href="'+wa(p)+'">'+l+'</a>'}
 function toast(m,ms){var e=document.createElement("div");e.className="toast";e.style.bottom=(100+document.querySelectorAll(".toast").length*54)+"px";e.textContent=m;document.body.appendChild(e);setTimeout(function(){e.remove()},ms||2000)}
 function routeCard(r,actions){
  return '<div class="card" data-flip="c-'+r.id+'"><div class="route" data-rmap="'+r.id+'"><div class="road"><div class="dot">'+PIN+'</div><div class="dash"></div><div class="dot end">🏁</div></div>'+
@@ -481,7 +485,7 @@ function viewFind(){
   var a;
   if(r.mine)a=ownActions(r);
   else{var q=myReq(r.id);
-   if(q)a='<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"&&(q.driverPhone||r.phone)?phLine(q.driverPhone||r.phone)+waBtn(q.driverPhone||r.phone,"💬 "+t("wa_driver")):"")+readyBtn(q,r)+cancelBtn(q,r,"cq");
+   if(q)a='<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"?phLine(q.driverPhone||r.phone)+waBtn(q.driverPhone||r.phone,"💬 "+t("wa_driver"))+chBtn(q.driver||r.owner,r.driver):"")+readyBtn(q,r)+cancelBtn(q,r,"cq");
    else if(r.seats<1)a='<span class="st rejected">😕 '+t("full")+'</span>';
    else a='<button class="btn" data-req="'+r.id+'">🙋 '+t("req_btn")+'</button>';}
   h+=routeCard(r,a)});
@@ -526,13 +530,13 @@ function viewReq(){
  else{
   if(!inc.length)h+='<div class="empty">📭 '+t("no_in")+'</div>';
   inc.forEach(function(q){var r=state.routes.find(function(x){return x.id===q.rid});if(!r)return;
-   var act=reqEnded(q,r)?endedLabel(r,q)+delBtn("q",q.id):(q.status==="pending"?'<button class="btn ok" data-acc="'+q.id+'">✅ '+t("accept")+'</button><button class="btn no" data-rej="'+q.id+'">❌ '+t("reject")+'</button>':'<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"&&q.phone?phLine(q.phone)+waBtn(q.phone,"💬 "+t("wa_pass")):"")+cancelBtn(q,r,"cd")+(q.readyDay===dayKey(new Date())?'<span class="st accepted">✅ '+t("is_ready")+'</span>':''));
+   var act=reqEnded(q,r)?endedLabel(r,q)+delBtn("q",q.id):(q.status==="pending"?'<button class="btn ok" data-acc="'+q.id+'">✅ '+t("accept")+'</button><button class="btn no" data-rej="'+q.id+'">❌ '+t("reject")+'</button>':'<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"?phLine(q.phone)+waBtn(q.phone,"💬 "+t("wa_pass"))+chBtn(q.passenger,q.name):"")+cancelBtn(q,r,"cd")+(q.readyDay===dayKey(new Date())?'<span class="st accepted">✅ '+t("is_ready")+'</span>':''));
    h+='<div class="card"><b>'+esc(q.name)+'</b> '+t("wants",{n:""}).trim()+'<div class="meta"><i>'+esc(rv(r,"from"))+' '+arr()+' '+esc(rv(r,"to"))+'</i><i>'+t12(r.time)+'</i>'+(q.addr?'<i class="amap" data-amap="'+q.id+'">🏠 '+esc(conv(q.addr))+'</i>':'')+'</div><div class="foot">'+(q.addrLL?'<button type="button" class="btn sec" data-navll="'+q.addrLL[0]+','+q.addrLL[1]+'">🗺 '+t("open_map")+'</button>':'')+act+'</div></div>'});
  }
  h+='<h2>📤 '+t("req_out")+'</h2>';
  if(!out.length)h+='<div class="empty">🙋 '+t("no_out")+'</div>';
  out.forEach(function(q){var r=state.routes.find(function(x){return x.id===q.rid});if(!r){h+=orphanCard(q);return}
-  h+=routeCard(r,reqEnded(q,r)?endedLabel(r,q)+delBtn("q",q.id):'<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"&&(q.driverPhone||r.phone)?phLine(q.driverPhone||r.phone)+waBtn(q.driverPhone||r.phone,"💬 "+t("wa_driver")):"")+readyBtn(q,r)+cancelBtn(q,r,"cq"))});
+  h+=routeCard(r,reqEnded(q,r)?endedLabel(r,q)+delBtn("q",q.id):'<span class="st '+q.status+'">'+stT(q.status,q)+'</span>'+(q.status==="accepted"?phLine(q.driverPhone||r.phone)+waBtn(q.driverPhone||r.phone,"💬 "+t("wa_driver"))+chBtn(q.driver||r.owner,r.driver):"")+readyBtn(q,r)+cancelBtn(q,r,"cq"))});
  return h+adHtml();
 }
 var PIN='<svg class="pin" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 1.5C6.2 1.5 1.8 5.9 1.8 11.6c0 7.4 8.6 17.4 9.4 18.3.4.4 1 .4 1.4 0 .8-.9 9.6-10.9 9.6-18.3C22.2 5.9 17.8 1.5 12 1.5z" fill="#FF8A1F" stroke="#E0540A" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="11.6" r="4.3" fill="#B93A06"/></svg>';
@@ -540,7 +544,7 @@ var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,lastTab="find"
 function snap(){var m={};document.querySelectorAll("[data-flip]").forEach(function(e){m[e.dataset.flip]=e.getBoundingClientRect()});return m}
 function movePill(instant){var b=document.querySelector('.tabs button[aria-selected="true"]'),p=document.getElementById("pill");if(!b||!p)return;
  if(instant)p.style.transition="none";
- var em=b.querySelector("em"),tw=em?em.getBoundingClientRect().width:0,W=p.parentNode.clientWidth,w=Math.max(b.offsetWidth,tw+20),x=b.offsetLeft-(w-b.offsetWidth)/2;x=Math.max(4,Math.min(x,W-w-4));
+ var em=b.querySelector("em"),tw=em?em.getBoundingClientRect().width:0,W=p.parentNode.clientWidth,w=Math.max(b.offsetWidth,tw+8),x=b.offsetLeft-(w-b.offsetWidth)/2;x=Math.max(4,Math.min(x,W-w-4));
  p.style.width=w+"px";p.style.transform="translateX("+x+"px)";
  if(instant){p.offsetWidth;p.style.transition=""}}
 function render(){
@@ -563,7 +567,7 @@ function doRender(){
  var a=document.getElementById("app");
  var fr0=document.getElementById("frow");if(fr0)frowScroll=fr0.scrollLeft;
  if(bigMap){try{bigMap.remove()}catch(e){}bigMap=null}
- a.innerHTML=state.tab==="find"?viewFind():state.tab==="offer"?viewOffer():state.tab==="map"?viewMap():state.tab==="about"?viewAbout():state.tab==="me"?viewMe():viewReq();
+ a.innerHTML=state.tab==="find"?viewFind():state.tab==="offer"?viewOffer():state.tab==="map"?viewMap():state.tab==="about"?viewAbout():state.tab==="me"?viewMe():state.tab==="chats"?viewChats():state.tab==="fb"?viewFeedback():viewReq();
  if(state.tab==="map")initBigMap();
  pushAds();
  document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===state.tab)});
@@ -747,12 +751,12 @@ document.addEventListener("click",function(e){
 function dayKey(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
 function hhmm(ts){var d=new Date(ts);return t12(z2(d.getHours())+":"+z2(d.getMinutes()))}
 function gateBtn(attr,id,r,label){var due=nowLocked(r);return '<button class="btn'+(due?'':' lockd')+'" '+attr+'="'+id+'" data-gate="'+r.id+'" data-label="'+esc(label)+'"'+(due?'':' data-locked="1"')+'>'+(due?'':'🔒 ')+label+'</button>'}
-function startBtn(r){if(r.tripDay===dayKey(new Date()))return '<span class="st accepted">🚗 '+t("on_way")+'</span>'+(r.mine?(liveRid===r.id?'<span class="st accepted">📡 '+t("live_on")+'</span>':'<button type="button" class="btn sec" data-livego="'+r.id+'">📡 '+t("live_go")+'</button>'):'');return gateBtn("data-start",r.id,r,"🚗 "+t("start_trip"))}
+function startBtn(r){if(r.tripDay===dayKey(new Date())&&r.tripEnd===r.tripDay&&window.endBtn)return endBtn(r)||'<span class="st accepted">🏁 '+t("rt_ended")+'</span>';if(r.tripDay===dayKey(new Date()))return '<span class="st accepted">🚗 '+t("on_way")+'</span>'+(r.mine?(liveRid===r.id?'<span class="st accepted">📡 '+t("live_on")+'</span>':'<button type="button" class="btn sec" data-livego="'+r.id+'">📡 '+t("live_go")+'</button>'):'')+(r.mine&&window.endBtn?endBtn(r):'');return gateBtn("data-start",r.id,r,"🚗 "+t("start_trip"))}
 function ownBtns(r){var acc=state.requests.some(function(q){return q.rid===r.id&&q.status==="accepted"});return (acc?startBtn(r):"")+'<button class="btn no" data-cr="'+r.id+'">🗑 '+t("cancel_ride")+'</button>'}
 function readyBtn(q,r){
  if(q.status!=="accepted")return "";
  var today=dayKey(new Date()),o="";
- if(r.tripDay===today)o+='<span class="st accepted">🚗 '+t("on_way")+'</span><button type="button" class="btn sec" data-livemap="'+r.id+'">🗺 '+t("live_map")+'</button>';
+ if(r.tripDay===today&&r.tripEnd!==today)o+='<span class="st accepted">🚗 '+t("on_way")+'</span><button type="button" class="btn sec" data-livemap="'+r.id+'">🗺 '+t("live_map")+'</button>';
  if(q.readyDay===today)return o+'<span class="st accepted">✅ '+t("ready_sent")+'</span>';
  return o+gateBtn("data-ready",q.id,r,"🙋 "+t("ready_btn"));
 }
@@ -889,7 +893,7 @@ function nitem(n){
  if(n.type==="trip_start"&&r&&!r.mine)act='<button type="button" class="btn sec" data-livemap="'+r.id+'">🗺 '+t("live_map")+'</button>';
  if(n.type==="ready"){
   if(d.addrLL)act+='<button type="button" class="btn sec" data-navll="'+d.addrLL[0]+','+d.addrLL[1]+'">🗺 '+t("open_map")+'</button>';
-  if(q&&q.phone)act+=waBtn(q.phone,"💬 "+t("wa_pass"));
+  if(q)act+=waBtn(q.phone,"💬 "+t("wa_pass"))+chBtn(q.passenger,q.name);
  }
  return '<div class="nitem'+(n.read?'':' unread')+'"><div class="nrole">'+(n.f==="d"?'🧑‍✈️ '+t("role_d"):'🧳 '+t("role_p"))+' • '+hhmm(n.ts)+'</div><div>'+esc(notifText(n))+'</div>'+(act?'<div class="foot">'+act+'</div>':'')+'</div>';
 }
@@ -957,7 +961,7 @@ try{termsOK=localStorage.getItem(TERMS)==="1"}catch(e){}
 function openTerms(){
  var old=document.getElementById("tmbg");if(old)old.remove();
  var bg=document.createElement("div");bg.className="tmbg";bg.id="tmbg";
- bg.innerHTML='<div class="tmbox"><div class="tmico">📜</div><h2>'+t("terms_h")+'</h2><div class="tmtxt">'+esc(t("terms_b"))+'</div><label class="tmchk"><input type="checkbox" id="tmchk"><span>'+t("terms_chk")+'</span></label><div class="tmerr hide" id="tmerr" role="alert">'+t("terms_err")+'</div><button type="button" class="btn" id="tmok" style="width:100%">✅ '+t("terms_ok")+'</button></div>';
+ bg.innerHTML='<div class="tmbox"><div class="tmico">📜</div><h2>'+t("terms_h")+'</h2><div class="tmtxt">'+esc(t("terms_b"))+'<p class="tmwarn">'+esc(t("fbwarn"))+'</p></div><label class="tmchk"><input type="checkbox" id="tmchk"><span>'+t("terms_chk")+'</span></label><div class="tmerr hide" id="tmerr" role="alert">'+t("terms_err")+'</div><button type="button" class="btn" id="tmok" style="width:100%">✅ '+t("terms_ok")+'</button></div>';
  document.body.appendChild(bg);if(!reduce)bg.animate([{opacity:0},{opacity:1}],{duration:250});
 }
 document.addEventListener("change",function(e){if(e.target.id==="tmchk"){var er=document.getElementById("tmerr");if(er&&e.target.checked)er.classList.add("hide")}});
@@ -1114,7 +1118,7 @@ var DBC={
   b.commit().then(function(){flushPush();done()},fail)},
  startTrip:function(r,done){
   var db=FB.db,b=db.batch();
-  b.update(db.collection("rides").doc(r.id),{tripDay:dayKey(new Date())});
+  b.update(db.collection("rides").doc(r.id),{tripDay:dayKey(new Date()),tripAt:Date.now()});
   state.requests.forEach(function(q){if(q.rid===r.id&&q.status==="accepted")b.set(colN().doc(),ntDoc(q.passenger,"p","trip_start",{rid:r.id,qid:q.id}))});
   b.commit().then(function(){flushPush();done()},fail)},
  markReady:function(q,r,done){
@@ -1290,7 +1294,7 @@ function viewAbout(){
  return '<h2 class="abh"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg> '+esc(a.title)+'</h2>'
  +'<div class="panel abt"><h3>'+esc(a.h1)+'</h3><p>'+esc(a.p1)+'</p><h3>'+esc(a.h2)+'</h3><ul>'+a.li.map(li).join("")+'</ul></div>'
  +'<div class="panel abt"><p>'+esc(a.ip)+'</p>'+(isStandalone()?'<p class="abok">✓ '+esc(a.id)+'</p>':'<button type="button" class="btn abinst" id="abInstall"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg> '+esc(a.ib)+'</button><p class="abhint" id="abHint">'+esc(a.ih).replace(/\n/g,"<br>")+'</p>')+'</div>'
- +'<div class="panel abt"><h3>'+esc(a.h3)+'</h3><ul>'+a.sl.map(li).join("")+'</ul><p class="abwarn">'+esc(a.warn)+'</p></div>'
+ +'<div class="panel abt"><h3>'+esc(a.h3)+'</h3><ul>'+a.sl.map(li).join("")+'</ul><p class="abwarn">'+esc(a.warn)+'<br><br>'+esc(a.warn2||ABOUT.ckb.warn2)+'</p></div>'
  +'<div class="panel abt"><h3>'+esc(a.h4)+'</h3>'+abContact()+'<h3>'+esc(a.h5)+'</h3><div class="abso">'+SOC.map(function(s){return '<a class="'+s[0]+'" href="'+s[2]+'"'+(s[0]==="vb"?'':' target="_blank" rel="noopener"')+' aria-label="'+s[1]+'" title="'+s[1]+'"><svg viewBox="0 0 24 24" aria-hidden="true">'+s[3]+'</svg></a>'}).join("")+'</div></div>';
 }
 var bigMap=null,mp=null,DEF=[36.1901,44.0091];
@@ -1516,5 +1520,6 @@ window.addEventListener("load",function(){movePill(true);placeFPill()});
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){movePill(true);placeFPill()});
 try{if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0)navigator.serviceWorker.register("sw.js").catch(function(){})}catch(e){}
 </script>
+<script src="plus.js?v=1"></script>
 </body>
 </html>
