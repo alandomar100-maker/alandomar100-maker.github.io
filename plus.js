@@ -72,7 +72,21 @@ fb_sent:["سوپاس، نێردرا ✅","Thank you, it was sent ✅","شكرً�
 fb_empty:["سەرەتا شتێک بنووسە","Write something first","اكتب شيئًا أولًا","ب دەستپێکێ تشتەکی بنڤێسە","Pêşî tiştekî binivîse"],
 fb_in:["ڕەخنە و پێشنیارە هاتووەکان (تەنها تۆ دەیانبینیت)","Received feedback (only you can see this)","الملاحظات الواردة (أنت فقط ترى هذا)","ڕەخنە و پێشنیارێن هاتی (تنێ تو دبینی)","Rexne û pêşniyarên hatî (tenê tu dibînî)"],
 fb_none:["هێشتا هیچ ڕەخنەیەک نەهاتووە","No feedback yet","لا توجد ملاحظات بعد","هێشتا چ ڕەخنە نەهاتینە","Hê tu rexne nehatine"],
-off_need:["ئەم بەشە تەنها کاتێک کار دەکات کە بە ئەژمارەوە چووبیتە ژوورەوە و ئینتەرنێت هەبێت","This section needs an account and an internet connection","يتطلب هذا القسم حسابًا واتصالًا بالإنترنت","ڤی بەشی پێدڤی ب ئەژمارەکێ و ئینتەرنێتێ هەیە","Ev beş hewceyî hesabek û înternetê ye"]
+off_need:["ئەم بەشە تەنها کاتێک کار دەکات کە بە ئەژمارەوە چووبیتە ژوورەوە و ئینتەرنێت هەبێت","This section needs an account and an internet connection","يتطلب هذا القسم حسابًا واتصالًا بالإنترنت","ڤی بەشی پێدڤی ب ئەژمارەکێ و ئینتەرنێتێ هەیە","Ev beş hewceyî hesabek û înternetê ye"],
+tab_set:["ڕێکخستنەکان","Settings","الإعدادات","ڕێکخستن","Rêkxistin"],
+ms_loc:["شوێنی ئێستام","My location","موقعي الحالي","جهێ من یێ نوکە","Cihê min yê niha"],
+ms_locating:["دیاریکردنی شوێن...","Locating…","جارٍ تحديد الموقع…","دیارکرنا جهی...","Cih tê diyarkirin…"],
+loc_denied:["ڕێگەپێدان بە شوێن (GPS) نەدرا. لە ڕێکخستنەکانی وێبگەڕەکەت چالاکی بکە","Location permission was denied. Allow it in your browser settings","تم رفض إذن الموقع. اسمح به من إعدادات المتصفح","ڕێپێدان بۆ جهی (GPS) نەهاتە دان. ل ڕێکخستنێن وێبگەڕێ چالاک بکە","Destûra cihê (GPS) nehat dayîn. Di mîhengên gerokê de çalak bike"],
+loc_fail:["نەتوانرا شوێنەکەت دیاری بکرێت، دووبارە هەوڵ بدەرەوە","Couldn't get your location, please try again","تعذر تحديد موقعك، حاول مرة أخرى","نەشیا جهێ تە دیار بکەت، دووبارە هەول بدە","Cihê te nehat diyarkirin, dîsa biceribîne"],
+ch_pt:["ڕێگەپێدان بە مایک/کامێرا نییە","Microphone/camera access is blocked","الوصول إلى الميكروفون/الكاميرا محظور","ڕێپێدان بۆ مایک/کامێرایێ نینە","Destûra mîkrofon/kamerayê tune"],
+ch_ph_i:["ئایفۆن: وێبسایتەکە لە Safari بکەرەوە (نەک لە ناو Telegram، Instagram یان Facebook)، پاشان:","iPhone: open the site in Safari (not inside Telegram, Instagram or Facebook), then:","آيفون: افتح الموقع في Safari (وليس داخل Telegram أو Instagram أو Facebook)، ثم:","ئایفۆن: مالپەرێ د Safari دا ڤەکە (نە د ناڤ Telegram، Instagram یان Facebook دا)، پاشی:","iPhone: malperê di Safari de veke (ne di nav Telegram, Instagram an Facebook de), paşê:"],
+ch_ph_a:["ئەندرۆید:","Android:","أندرويد:","ئەندرۆید:","Android:"],
+ch_ph_end:["پاشان پەڕەکە نوێ بکەرەوە و دووبارە هەوڵ بدە.","Then reload the page and try again.","ثم أعد تحميل الصفحة وحاول مرة أخرى.","پاشی لاپەڕێ نوی بکە و دووبارە هەول بدە.","Paşê rûpelê nû bike û dîsa biceribîne."],
+ch_inapp:["تێبینی: ئێستا لە ناو بەرنامەیەکی تر (وەک Telegram یان Instagram) کراوەتەوە و ئەمە ڕێگە بە مایک و کامێرا نادات. لە Safari بیکەرەوە.","Note: the site is open inside another app (like Telegram or Instagram), which blocks the microphone and camera. Open it in Safari.","ملاحظة: الموقع مفتوح داخل تطبيق آخر (مثل Telegram أو Instagram) وهذا يمنع الميكروفون والكاميرا. افتحه في Safari.","تێبینی: ئەڤ مالپەر د ناڤ ئەپەکێ دی دا (وەک Telegram یان Instagram) ڤەبوویە و ئەڤە ڕێ ب مایک و کامێرایێ نادەت. د Safari دا ڤەکە.","Têbînî: ev malper di nav sepaneke din de (wekî Telegram an Instagram) vebûye û ev rê nade mîkrofon û kamerayê. Di Safari de veke."],
+ch_nodev:["مایک یان کامێرا نەدۆزرایەوە","No microphone or camera was found","لم يتم العثور على ميكروفون أو كاميرا","مایک یان کامێرا نەهاتە دیتن","Mîkrofon an kamera nehat dîtin"],
+ch_inuse:["مایک/کامێرا لەلایەن بەرنامەیەکی ترەوە بەکاردێت","The microphone/camera is being used by another app","الميكروفون/الكاميرا مستخدم من تطبيق آخر","مایک/کامێرا ژ لایێ ئەپەکێ دی ڤە دهێتە بکارئینان","Mîkrofon/kamera ji aliyê sepaneke din ve tê bikaranîn"],
+ch_imgerr:["ئەم وێنەیە نەکرایەوە، وێنەیەکی تر هەڵبژێرە","This image couldn't be opened, pick another one","تعذر فتح هذه الصورة، اختر صورة أخرى","ئەڤ وێنە نەهاتە ڤەکرن، وێنەکێ دی هەلبژێرە","Ev wêne nehat vekirin, wêneyekî din hilbijêre"],
+ch_bigv:["ڤیدیۆکە زۆر گەورەیە (زیاتر لە 25MB)","The video is too large (over 25MB)","الفيديو كبير جدًا (أكثر من 25MB)","ڤیدیۆ گەلەک مەزنە (پتر ژ 25MB)","Vîdyo pir mezin e (ji 25MB zêdetir)"]
 };
 LG.forEach(function(l,i){var o={};Object.keys(S).forEach(function(k){o[k]=S[k][i]});Object.assign(T[l],o)});
 LG.forEach(function(l){if(window.ABOUT&&ABOUT[l])ABOUT[l].warn2=T[l].fbwarn});
@@ -95,7 +109,12 @@ var IC={
  mic:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>',
  send:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>',
  back:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
- trash:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>'
+ trash:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>',
+ chev:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
+ locate:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>',
+ user:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.2-2.4 3.2-3.5 5.5-3.5s4.3 1.1 5.5 3.5"/></svg>',
+ edit:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-6"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z"/></svg>',
+ info:'<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>'
 };
 
 /* ---------- state ---------- */
@@ -330,28 +349,34 @@ function sendText(){
   i.value="";syncGo();
   sendMsg({k:"t",txt:tx.slice(0,1500)});
 }
-function imgData(f,max,q){
-  return new Promise(function(ok,no){
-    var fr=new FileReader();
-    fr.onload=function(){var im=new Image();im.onload=function(){
-      var s=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement("canvas");
-      c.width=Math.max(1,Math.round(im.width*s));c.height=Math.max(1,Math.round(im.height*s));
-      c.getContext("2d").drawImage(im,0,0,c.width,c.height);ok(c.toDataURL("image/jpeg",q))};
-      im.onerror=no;im.src=fr.result};
-    fr.onerror=no;fr.readAsDataURL(f);
-  });
+function loadPic(f){
+  var viaImg=function(){return new Promise(function(ok,no){
+    var u=URL.createObjectURL(f),im=new Image();
+    im.onload=function(){URL.revokeObjectURL(u);ok(im)};
+    im.onerror=function(){URL.revokeObjectURL(u);no(new Error("decode"))};
+    im.src=u;
+  })};
+  if(window.createImageBitmap){try{return createImageBitmap(f).catch(viaImg)}catch(e){}}
+  return viaImg();
+}
+function shrink(src,max,q){
+  var s=Math.min(1,max/Math.max(src.width,src.height)),c=document.createElement("canvas");
+  c.width=Math.max(1,Math.round(src.width*s));c.height=Math.max(1,Math.round(src.height*s));
+  var x=c.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,c.width,c.height);x.drawImage(src,0,0,c.width,c.height);
+  return c.toDataURL("image/jpeg",q);
 }
 function sendImage(f){
-  imgData(f,1024,.62).then(function(d){
-    if(d.length>800000)return imgData(f,720,.5);
-    return d;
-  }).then(function(d){
+  loadPic(f).then(function(src){
+    var steps=[[1280,.72],[1024,.62],[800,.55],[640,.5],[480,.42]],d="";
+    for(var i=0;i<steps.length;i++){d=shrink(src,steps[i][0],steps[i][1]);if(d.length<=700000)break}
+    try{if(src.close)src.close()}catch(e){}
+    if(d.indexOf("data:image/jpeg")!==0){toast(t("ch_imgerr"),3500);return}
     if(d.length>900000){toast(t("ch_big"));return}
     sendMsg({k:"i",d:d});
-  }).catch(function(){toast(t("ch_big"))});
+  }).catch(function(){toast(t("ch_imgerr"),3500)});
 }
 function sendVideo(f){
-  if(f.size>25*1048576){toast(t("ch_big"));return}
+  if(f.size>25*1048576){toast(t("ch_bigv"),3500);return}
   var c=CH.cur;if(!c)return;
   if(!FB.st){toast(t("ch_novid"),3500);return}
   var ext=/mp4|quicktime|mov/i.test(f.type)?"mp4":"webm",ref=FB.st.ref("chat/"+c.cid+"/"+Date.now()+"_"+UID+"."+ext);
@@ -401,7 +426,7 @@ function recStart(){
     };
     REC={mr:mr,t0:t0,cancel:false,iv:setInterval(recTick,250)};
     mr.start();paintBar();
-  }).catch(function(){toast(t("ch_noperm"))});
+  },mediaErr);
 }
 function recStop(cancel){
   if(!REC)return;
@@ -415,8 +440,29 @@ function lightbox(src){
 
 /* ================= audio / video calls (WebRTC, signalling through Firestore) ================= */
 var CALL=null,INC=null,callU=null,AC=null,ringT=null;
+var UA=navigator.userAgent||"",IOS=/iP(hone|ad|od)/.test(UA)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+function inAppBrowser(){return /FBAN|FBAV|Instagram|Snapchat|Line\/|Viber|MicroMessenger|TikTok|Telegram/i.test(UA)||(IOS&&!/Safari\//.test(UA)&&!navigator.standalone)}
+function permHelp(name){
+  var o=$("hpbg");if(o)o.remove();
+  o=document.createElement("div");o.className="tmbg hpbg";o.id="hpbg";
+  o.innerHTML='<div class="tmbox"><div class="tmico">🎙️</div><h2>'+esc(t("ch_pt"))+'</h2>'+(inAppBrowser()?'<p class="maphint hpnote">'+esc(t("ch_inapp"))+'</p>':'')+'<p class="maphint hptxt">'+esc(t("ch_ph_i"))+'</p><div class="hpath" dir="ltr">aA → Website Settings → Microphone / Camera → Allow</div><div class="hpath" dir="ltr">Settings → Safari → Camera / Microphone → Ask / Allow</div><p class="maphint hptxt">'+esc(t("ch_ph_a"))+'</p><div class="hpath" dir="ltr">Chrome → ⋮ → Settings → Site settings → Microphone / Camera → Allow</div><p class="maphint hptxt">'+esc(t("ch_ph_end"))+'</p>'+(name?'<p class="hpcode" dir="ltr">'+esc(name)+'</p>':'')+'<button type="button" class="btn" id="hpok" style="width:100%">OK</button></div>';
+  document.body.appendChild(o);
+}
+function mediaErr(e){
+  var n=(e&&e.name)||"";
+  if(n==="NotAllowedError"||n==="SecurityError"||n==="PermissionDeniedError"){permHelp(n);return}
+  if(n==="NotFoundError"||n==="DevicesNotFoundError"||n==="OverconstrainedError"){toast(t("ch_nodev"),4000);return}
+  if(n==="NotReadableError"||n==="TrackStartError"||n==="AbortError"){toast(t("ch_inuse"),4000);return}
+  toast(t("ch_noperm")+(n?" ("+n+")":""),4500);
+}
 function getMedia(kind){
-  return navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true},video:kind==="v"?{facingMode:"user",width:{ideal:640},height:{ideal:480}}:false});
+  var md=navigator.mediaDevices;
+  var want={audio:{echoCancellation:true,noiseSuppression:true},video:kind==="v"?{facingMode:"user",width:{ideal:640},height:{ideal:480}}:false};
+  return md.getUserMedia(want).catch(function(e){
+    var n=e&&e.name;
+    if(n==="OverconstrainedError"||n==="TypeError")return md.getUserMedia({audio:true,video:kind==="v"});
+    throw e;
+  });
 }
 function callStatus(s){var e=$("clst");if(e)e.textContent=s||""}
 function callUI(n,kind){
@@ -476,7 +522,7 @@ function startCall(kind){
       CALL.uns.push(ref.collection("ce").onSnapshot(function(sn){sn.docChanges().forEach(function(ch){if(ch.type==="added")addCand(ch.doc.data())})}));
       CALL.to=setTimeout(function(){if(CALL&&!CALL.t0)endCall("miss")},45000);
     }).catch(function(e){try{console.log(e)}catch(x){}toast(t("ch_nocall"));endCall("err",true)});
-  }).catch(function(){toast(t("ch_noperm"))});
+  },mediaErr);
 }
 function logCall(C,st,secs){
   var ref=FB.db.collection("chats").doc(C.cid),ts=Date.now(),up={last:st,lastK:"c",lastFrom:UID,lastTs:ts};
@@ -537,7 +583,7 @@ function acceptCall(){
       CALL.uns.push(ref.onSnapshot(function(sn){var d=sn.data();if(d&&(d.state==="ended"||d.state==="missed"))endCall("ok",true)}));
       flushQ();
     }).catch(function(e){try{console.log(e)}catch(x){}endCall("err")});
-  }).catch(function(){toast(t("ch_noperm"));declineCall()});
+  },function(e){mediaErr(e);declineCall()});
 }
 function watchCalls(){
   callU=FB.db.collection("calls").where("to","==",UID).where("state","==","ring").onSnapshot(function(sn){
@@ -551,6 +597,46 @@ function watchCalls(){
   },permOnce);
 }
 function stopCallWatch(){if(callU){try{callU()}catch(e){}callU=null}}
+
+/* ================= settings ================= */
+function viewSettings(){
+  var rows=[["me",IC.user,t("tab_me")],["fb",IC.edit,t("tab_fb")],["about",IC.info,String(t("tab_about")).replace(/\s+/g," ")]];
+  var h='<h2>⚙️ '+esc(t("tab_set"))+'</h2>'+thPanel()+'<div class="setlist">';
+  rows.forEach(function(r){h+='<button type="button" class="setrow" data-setgo="'+r[0]+'"><span class="seti">'+r[1]+'</span><b>'+esc(r[2])+'</b><span class="chev">'+IC.chev+'</span></button>'});
+  return h+'</div>';
+}
+function setWrap(h){return '<button type="button" class="setback" data-setback="1">'+IC.back+'<span>'+esc(t("tab_set"))+'</span></button>'+h}
+
+/* ================= map picker: "my location" button ================= */
+function mpLocate(){
+  var b=$("msloc");
+  if(!$("mpbg")||typeof mp==="undefined"||!mp)return;
+  if(!navigator.geolocation){toast(t("loc_fail"),3500);return}
+  var my=mp,lab=$("mslabel");
+  if(b)b.classList.add("busy");
+  if(lab)lab.textContent="⏳ "+t("ms_locating");
+  navigator.geolocation.getCurrentPosition(function(p){
+    if(b)b.classList.remove("busy");
+    if(mp!==my)return;
+    var ll=[p.coords.latitude,p.coords.longitude];
+    try{my.map.setView(ll,Math.max(my.map.getZoom()||0,17))}catch(e){}
+    mpSet(ll,null);
+  },function(e){
+    if(b)b.classList.remove("busy");
+    if(lab&&mp===my&&!my.ll)lab.textContent=t("ms_tap");
+    toast(t(e&&e.code===1?"loc_denied":"loc_fail"),4000);
+  },{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+}
+function addLocBtn(){
+  var box=$("pkmap");if(!box||$("msloc"))return;
+  var b=document.createElement("button");b.type="button";b.id="msloc";b.className="msloc";
+  b.innerHTML=IC.locate+'<span>'+esc(t("ms_loc"))+'</span>';
+  b.addEventListener("click",function(e){e.preventDefault();mpLocate()});
+  try{L.DomEvent.disableClickPropagation(b)}catch(e){}
+  box.appendChild(b);
+}
+var _omp=window.openMapPicker;
+window.openMapPicker=function(){var r=_omp.apply(this,arguments);try{addLocBtn()}catch(e){}return r};
 
 /* ================= wiring ================= */
 function plusStop(){
@@ -588,7 +674,7 @@ window.startSync=function(){_ss.apply(this,arguments);try{plusStart()}catch(e){t
 window.stopSync=function(){_sp.apply(this,arguments);try{plusStop()}catch(e){}};
 
 /* the main script calls these by name */
-window.chBtn=chBtn;window.viewChats=viewChats;window.viewFeedback=viewFeedback;window.endBtn=endBtn;window.hwEnd=hwEnd;
+window.chBtn=chBtn;window.viewChats=viewChats;window.viewFeedback=viewFeedback;window.endBtn=endBtn;window.hwEnd=hwEnd;window.viewSettings=viewSettings;window.setWrap=setWrap;
 
 /* one click handler for everything new */
 document.addEventListener("click",function(e){
@@ -596,6 +682,8 @@ document.addEventListener("click",function(e){
   if(lb){lightbox(lb.src);return}
   var b=tg.closest&&tg.closest("button");if(!b)return;
   var d=b.dataset,id=b.id;
+  if(d.setgo){state.tab=d.setgo;render();window.scrollTo(0,0);return}
+  if(d.setback){state.tab="settings";render();window.scrollTo(0,0);return}
   if(d.chat!==undefined){openChat(d.chat,d.chname);return}
   if(d.call){startCall(d.call);return}
   if(d.endtrip){var rid=d.endtrip;askConfirm("🏁",t("rt_end"),routeName(rid),"✅ "+t("rt_end"),function(){hwEnd(rid)});return}
@@ -615,6 +703,7 @@ document.addEventListener("click",function(e){
   if(id==="chgo"){var ci=$("chin");if(ci&&ci.value.trim())sendText();else recStart();return}
   if(id==="chrc"){recStop(true);return}
   if(id==="chrs"){recStop(false);return}
+  if(id==="hpok"){var hp=$("hpbg");if(hp)hp.remove();return}
   if(id==="clacc"){acceptCall();return}
   if(id==="cldec"){declineCall();return}
   if(id==="clend"){endCall(CALL&&CALL.t0?"ok":"miss");return}

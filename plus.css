@@ -8,12 +8,8 @@
 /* new paragraph inside the terms dialog */
 .tmtxt .tmwarn{margin:12px 0 0;padding:10px 12px;border:1px solid rgba(255,154,60,.45);border-radius:14px;background:rgba(255,138,43,.1);font-size:.9rem;line-height:1.9}
 
-/* bottom dock: 8 tabs */
-.tabs{left:6px;right:6px;padding:6px 3px;gap:0}
-.tabs button{font-size:.52rem;padding:6px 0;min-width:0}
-.tabs button .i{width:22px;height:22px}
+/* bottom dock */
 .tabs button span{position:relative}
-.tabs button em{max-width:none;overflow:visible}
 .tbd{position:absolute;top:-5px;inset-inline-end:-6px;min-width:16px;height:16px;padding:0 4px;border-radius:9px;background:#ef4444;color:#fff;font-size:.62rem;font-style:normal;line-height:16px;text-align:center;box-sizing:border-box}
 .tbd.hide{display:none}
 
@@ -93,3 +89,30 @@ html[dir=ltr] .chback .i{transform:scaleX(-1)}
 .fbitem p{white-space:pre-wrap;margin:8px 0}
 .fbmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .fbmeta small{opacity:.7}
+
+/* settings page */
+.setlist{margin-top:8px}
+.setrow{display:flex;align-items:center;gap:12px;width:100%;padding:14px;margin:8px 0;border-radius:20px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;font-weight:700;text-align:start;cursor:pointer}
+.setrow .seti .i{width:24px;height:24px;color:var(--accent)}
+.setrow b{flex:1;font-weight:700}
+.setrow .chev{opacity:.6;display:grid;place-items:center}
+html[dir=rtl] .setrow .chev .i{transform:scaleX(-1)}
+.setback{display:inline-flex;align-items:center;gap:6px;margin:0 0 8px;padding:8px 14px 8px 12px;border-radius:99px;border:1px solid var(--line);background:var(--glass);color:var(--ink);font:inherit;font-weight:700;font-size:.9rem;cursor:pointer}
+.setback .i{width:18px;height:18px}
+html[dir=ltr] .setback .i{transform:scaleX(-1)}
+
+/* map picker: home marker without glow + "my location" button */
+.emk.emk-home{text-shadow:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.45))}
+#pkmap{position:relative}
+.msloc{position:absolute;right:12px;bottom:40px;z-index:1000;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:99px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-weight:700;font-size:.85rem;box-shadow:0 6px 16px rgba(0,0,0,.35);cursor:pointer}
+.msloc .i{width:20px;height:20px;color:var(--accent)}
+.msloc.busy .i{animation:mslocspin 1s linear infinite}
+@keyframes mslocspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.msloc.busy .i{animation:none}}
+
+/* microphone / camera help sheet */
+.hpbg{z-index:170}
+.hptxt{white-space:pre-line;text-align:start;line-height:1.9}
+.hpnote{text-align:start;color:var(--accent);line-height:1.8}
+.hpath{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:8px 10px;margin:6px 0;font-size:.8rem;text-align:left;line-height:1.6}
+.hpcode{opacity:.55;font-size:.75rem;text-align:center;margin:6px 0 12px}

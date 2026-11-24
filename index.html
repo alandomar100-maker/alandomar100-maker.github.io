@@ -254,7 +254,7 @@ a.btn{text-align:center}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Vazirmatn:wght@400;600;800&family=Noto+Emoji:wght@500;700&display=swap" rel="stylesheet">
-<script>try{var hv=localStorage.getItem("hw_theme");if(hv==="light"||(hv==="system"&&window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script><link rel="stylesheet" href="glass.css?v=7"><link rel="stylesheet" href="plus.css?v=1">
+<script>try{var hv=localStorage.getItem("hw_theme");if(hv==="light"||(hv==="system"&&window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.setAttribute("data-theme","light")}catch(e){}</script><link rel="stylesheet" href="glass.css?v=7"><link rel="stylesheet" href="plus.css?v=2">
 </head>
 <body>
 <noscript><h1>هاوڕێگە · HawRega</h1><p>هاوڕێگە: وێبسایتی هاوبەشکردنی ڕێگا (Carpooling) بۆ شۆفێر و سەرنشین لە کوردستان. بە هەمان ڕێگادا بڕۆ، تێچووی بەنزین دابەش بکە و قەرەباڵغی کەم بکەرەوە.</p></noscript>
@@ -283,9 +283,7 @@ a.btn{text-align:center}
   <button role="tab" data-tab="req" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3.5"/><path d="m4 8.5 8 5.5 8-5.5"/></svg></span><em data-i="tab_req"></em></button>
   <button role="tab" data-tab="chats" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><b class="tbd hide" id="chBd"></b></span><em data-i="tab_chats"></em></button>
   <button role="tab" data-tab="map" aria-selected="false"><span class="tabemo">🗺</span><em data-i="tab_map"></em></button>
-  <button role="tab" data-tab="me" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.2-2.4 3.200-3.500 5.500-3.500s4.300 1.100 5.500 3.500"/></svg></span><em data-i="tab_me"></em></button>
-  <button role="tab" data-tab="fb" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 4H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-6"/><path d="M18.5 2.5a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5Z"/></svg></span><em data-i="tab_fb"></em></button>
-  <button role="tab" data-tab="about" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span><em data-i="tab_about"></em></button>
+  <button role="tab" data-tab="settings" aria-selected="false"><span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><em data-i="tab_set"></em></button>
 </nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
@@ -361,7 +359,7 @@ Object.assign(T.bdl,{live_go:"Cihê min li ser nexşeyê parve bike",live_on:"R�
 var CAMSVG='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
 function viewMe(){
  var n=String(state.me||"").trim(),ag=state.age,gn=state.gender,em=(cloud&&UID)?UEMAIL:"";
- return '<h2>👤 '+t("me_t")+'</h2><div class="panel mecard"><button type="button" class="meava" id="phbtn" aria-label="photo">'+(state.photo?'<img src="'+state.photo+'" alt="">':esc(n.charAt(0)||"؟"))+'<span class="mecam">'+CAMSVG+'</span></button><input type="file" accept="image/*" id="phfile" hidden>'+(state.photo?'<button type="button" class="phdel" id="phdel">'+t("ph_del")+'</button>':'')+'<div class="mename">'+esc(n||"—")+'</div>'+(em?'<div class="meemail">'+esc(em)+'</div>':'')+'<div class="meta">'+(ag?'<i>🎂 '+esc(ag)+'</i>':'')+(gn?'<i>'+(gn==="f"?'👩 '+t("gen_f"):'👨 '+t("gen_m"))+'</i>':'')+'<i>📱 '+(state.phone?esc(state.phone):t("no_val"))+'</i>'+'</div></div><div class="panel mepf">'+profFields()+'<button type="button" class="btn" id="mesave" style="width:100%;margin-top:14px">💾 '+t("me_save")+'</button></div>'+thPanel()+((cloud&&UID)?'<button type="button" class="btn no acbtn" id="aclogout">🚪 '+t("logout")+'</button>':'')}
+ return '<h2>👤 '+t("me_t")+'</h2><div class="panel mecard"><button type="button" class="meava" id="phbtn" aria-label="photo">'+(state.photo?'<img src="'+state.photo+'" alt="">':esc(n.charAt(0)||"؟"))+'<span class="mecam">'+CAMSVG+'</span></button><input type="file" accept="image/*" id="phfile" hidden>'+(state.photo?'<button type="button" class="phdel" id="phdel">'+t("ph_del")+'</button>':'')+'<div class="mename">'+esc(n||"—")+'</div>'+(em?'<div class="meemail">'+esc(em)+'</div>':'')+'<div class="meta">'+(ag?'<i>🎂 '+esc(ag)+'</i>':'')+(gn?'<i>'+(gn==="f"?'👩 '+t("gen_f"):'👨 '+t("gen_m"))+'</i>':'')+'<i>📱 '+(state.phone?esc(state.phone):t("no_val"))+'</i>'+'</div></div><div class="panel mepf">'+profFields()+'<button type="button" class="btn" id="mesave" style="width:100%;margin-top:14px">💾 '+t("me_save")+'</button></div>'+((cloud&&UID)?'<button type="button" class="btn no acbtn" id="aclogout">🚪 '+t("logout")+'</button>':'')}
 function photoSync(){if(cloud&&UID)FB.db.collection("users").doc(UID).set({photo:state.photo||""},{merge:true}).catch(function(){})}
 document.addEventListener("change",function(e){if(e.target.id!=="phfile")return;var f=e.target.files&&e.target.files[0];if(!f)return;
  var rd=new FileReader();rd.onload=function(){var im=new Image();im.onload=function(){var c=document.createElement("canvas"),z=256,m=Math.min(im.width,im.height);c.width=c.height=z;c.getContext("2d").drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,z,z);state.photo=c.toDataURL("image/jpeg",.82);save();photoSync();doRender();pfAvaPaint();toast(t("me_saved"))};im.src=rd.result};rd.readAsDataURL(f)});
@@ -460,6 +458,8 @@ function stT(x,q){return STI[x]+t(x==="cancelled"&&q?"st_cancelled_"+(q.by||"p")
 function daysHtml(r){var d=r.days||[],D=t("days");if(!d.length)return"";return '<div class="meta">'+d.map(function(i){return '<i>'+D[i]+'</i>'}).join("")+'</div>'}
 function wa(p){var d=String(p).replace(/\D/g,"");if(d.indexOf("00")===0)d=d.slice(2);else if(d.charAt(0)==="0")d="964"+d.slice(1);return "https://wa.me/"+d}
 function phLine(p){p=String(p||"").trim();return '<span class="phline">'+t("phone_lbl")+' : '+(p?'<bdi dir="ltr">'+esc(p)+'</bdi>':t("no_val"))+'</span>'}
+function navTab(){var x=state.tab;return x==="me"||x==="fb"||x==="about"?"settings":x}
+function setWrap(h){return h}function viewSettings(){return ""}
 function chBtn(){return ""}function viewChats(){return ""}function viewFeedback(){return ""}
 function waBtn(p,l){if(!String(p||"").trim())return '<span class="btn sec wadis">💬 WhatsApp : '+t("no_val")+'</span>';return '<a class="btn ok" style="text-decoration:none;text-align:center" target="_blank" rel="noopener" href="'+wa(p)+'">'+l+'</a>'}
 function toast(m,ms){var e=document.createElement("div");e.className="toast";e.style.bottom=(100+document.querySelectorAll(".toast").length*54)+"px";e.textContent=m;document.body.appendChild(e);setTimeout(function(){e.remove()},ms||2000)}
@@ -544,7 +544,7 @@ var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,lastTab="find"
 function snap(){var m={};document.querySelectorAll("[data-flip]").forEach(function(e){m[e.dataset.flip]=e.getBoundingClientRect()});return m}
 function movePill(instant){var b=document.querySelector('.tabs button[aria-selected="true"]'),p=document.getElementById("pill");if(!b||!p)return;
  if(instant)p.style.transition="none";
- var em=b.querySelector("em"),tw=em?em.getBoundingClientRect().width:0,W=p.parentNode.clientWidth,w=Math.max(b.offsetWidth,tw+8),x=b.offsetLeft-(w-b.offsetWidth)/2;x=Math.max(4,Math.min(x,W-w-4));
+ var em=b.querySelector("em"),tw=em?em.getBoundingClientRect().width:0,W=p.parentNode.clientWidth,w=Math.max(b.offsetWidth,tw+20),x=b.offsetLeft-(w-b.offsetWidth)/2;x=Math.max(4,Math.min(x,W-w-4));
  p.style.width=w+"px";p.style.transform="translateX("+x+"px)";
  if(instant){p.offsetWidth;p.style.transition=""}}
 function render(){
@@ -567,10 +567,10 @@ function doRender(){
  var a=document.getElementById("app");
  var fr0=document.getElementById("frow");if(fr0)frowScroll=fr0.scrollLeft;
  if(bigMap){try{bigMap.remove()}catch(e){}bigMap=null}
- a.innerHTML=state.tab==="find"?viewFind():state.tab==="offer"?viewOffer():state.tab==="map"?viewMap():state.tab==="about"?viewAbout():state.tab==="me"?viewMe():state.tab==="chats"?viewChats():state.tab==="fb"?viewFeedback():viewReq();
+ a.innerHTML=state.tab==="find"?viewFind():state.tab==="offer"?viewOffer():state.tab==="map"?viewMap():state.tab==="about"?setWrap(viewAbout()):state.tab==="me"?setWrap(viewMe()):state.tab==="settings"?viewSettings():state.tab==="chats"?viewChats():state.tab==="fb"?setWrap(viewFeedback()):viewReq();
  if(state.tab==="map")initBigMap();
  pushAds();
- document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===state.tab)});
+ document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===navTab())});
  if(state.tab==="offer")calc();
  movePill();placeFPill();keepChips();refreshGates();
 }
@@ -1282,7 +1282,7 @@ window.addEventListener("beforeinstallprompt",function(e){e.preventDefault();_ip
 window.addEventListener("appinstalled",function(){_ip=null;hdInstSync();if(state.tab==="about")render()});
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#abInstall");if(!b)return;if(_ip){var p=_ip;_ip=null;p.prompt();return}var h=document.getElementById("abHint");if(h)h.classList.toggle("on")});
 function hdInstSync(){var b=document.getElementById("hdInstall"),A=typeof ABOUT!=="undefined"?ABOUT:null;if(!b||!A)return;var a=A[lang]||A.ckb;b.querySelector("span").textContent=a.ib;b.parentNode.style.display=isStandalone()?"none":""}
-document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#hdInstall");if(!b)return;if(_ip){var p=_ip;_ip=null;p.prompt();return}var t=document.querySelector('nav.tabs button[data-tab="about"]');if(t)t.click();setTimeout(function(){var h=document.getElementById("abHint");if(h){h.classList.add("on");h.scrollIntoView({block:"center",behavior:"smooth"})}},150)});
+document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#hdInstall");if(!b)return;if(_ip){var p=_ip;_ip=null;p.prompt();return}state.tab="about";render();window.scrollTo(0,0);setTimeout(function(){var h=document.getElementById("abHint");if(h){h.classList.add("on");h.scrollIntoView({block:"center",behavior:"smooth"})}},150)});
 hdInstSync();
 var SOC=[["fb","Facebook","https://www.facebook.com/share/1C9s38M24T/",'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>'],
 ["wa","WhatsApp","https://wa.me/9647517267267",'<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path transform="translate(7.3 7.3) scale(.4)" fill="#fff" stroke="none" <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>'],
@@ -1437,7 +1437,7 @@ function pfAvaPaint(){var a=document.getElementById("pfava");if(a)a.innerHTML=pf
 function thPref(){try{var v=localStorage.getItem("hw_theme");return v==="light"||v==="system"?v:"dark"}catch(e){return "dark"}}
 function thEff(p){return p==="system"?((window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark"):p}
 function thApply(){var e=thEff(thPref()),h=document.documentElement;if(e==="light")h.setAttribute("data-theme","light");else h.removeAttribute("data-theme");var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute("content",e==="light"?"#FFF3E6":"#14110F")}
-function setTheme(p){try{localStorage.setItem("hw_theme",p)}catch(e){}thApply();if(state.tab==="me")doRender()}
+function setTheme(p){try{localStorage.setItem("hw_theme",p)}catch(e){}thApply();if(state.tab==="me"||state.tab==="settings")doRender()}
 function thPanel(){var p=thPref();return '<div class="panel"><label>🎨 '+t("th_l")+'</label><div class="row" id="throw">'+[["dark","🌙",t("th_dark")],["light","☀️",t("th_light")],["system","📱",t("th_sys")]].map(function(x){return '<button type="button" class="chip" data-th="'+x[0]+'" aria-pressed="'+(p===x[0])+'">'+x[1]+' '+x[2]+'</button>'}).join("")+'</div></div>'}
 try{var thq=matchMedia("(prefers-color-scheme: light)"),thf=function(){if(thPref()==="system")thApply()};if(thq.addEventListener)thq.addEventListener("change",thf);else if(thq.addListener)thq.addListener(thf)}catch(e){}
 thApply();
@@ -1493,7 +1493,7 @@ function carTurn(mk,h){var e=mk.getElement&&mk.getElement(),c=e&&e.querySelector
  function paint(sel){btns().forEach(function(b){b.setAttribute("aria-selected",b===sel)})}
  function end(e,cancel){if(!D||e.pointerId!==D.id)return;var was=mv,b=under(e.clientX+D.off);D=null;mv=false;nav.classList.remove("drag");pl.style.transition="";
   try{nav.releasePointerCapture(e.pointerId)}catch(x){}
-  if(!was)return;
+  if(!was){var sb=nav.querySelector('button[aria-selected="true"]');if(!cancel&&sb&&sb.dataset.tab!==state.tab)sb.click();return}
   if(!cancel&&b&&b.dataset.tab!==state.tab)b.click();
   else{paint(nav.querySelector('button[data-tab="'+state.tab+'"]'));movePill()}
   swallow=true;setTimeout(function(){swallow=false},350)}
@@ -1520,6 +1520,6 @@ window.addEventListener("load",function(){movePill(true);placeFPill()});
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){movePill(true);placeFPill()});
 try{if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0)navigator.serviceWorker.register("sw.js").catch(function(){})}catch(e){}
 </script>
-<script src="plus.js?v=1"></script>
+<script src="plus.js?v=2"></script>
 </body>
 </html>
